@@ -21,7 +21,7 @@ app/code/local/Zend/XmlRpc/Client.php            app/code/local/Zend/XmlRpc/Clie
 # Shell scripts to be executed after installation:
 @shell echo "--"
 ## Adding as this module as a GIT submodule to the parent repo...
-@shell MODULE_NAME="$(basename ${MODULE})" && echo "Adding '${MODULE_NAME}' as a GIT submodule..." && cd ../../ && git submodule add -f git@github.com:IndieGroup/${MODULE_NAME}.git .modman/${MODULE_NAME}/
+@shell MODULE_NAME="$(basename ${MODULE})" && echo "Adding '${MODULE_NAME}' as a GIT submodule..." && cd ../../ && git submodule add -f https://github.com/IndieGroup/${MODULE_NAME}.git .modman/${MODULE_NAME}/
 
 ## Clearing the Magento caches
 @shell echo "--"
