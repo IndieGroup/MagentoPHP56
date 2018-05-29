@@ -17,3 +17,15 @@ app/code/local/Zend/Validate/StringLength.php    app/code/local/Zend/Validate/St
 
 # Up-to-date with Magento 1.9.1.1.
 app/code/local/Zend/XmlRpc/Client.php            app/code/local/Zend/XmlRpc/Client.php
+
+# Shell scripts to be executed after installation:
+@shell echo "--"
+## Adding as this module as a GIT submodule to the parent repo...
+@shell MODULE_NAME="$(basename ${MODULE})" && echo "Adding '${MODULE_NAME}' as a GIT submodule..." && cd ../../ && git submodule add -f git@github.com:IndieGroup/${MODULE_NAME}.git .modman/${MODULE_NAME}/
+
+## Clearing the Magento caches
+@shell echo "--"
+@shell echo "Clearing Magento Caches..."
+@shell n98-magerun cache:flush
+
+@shell echo "--"
