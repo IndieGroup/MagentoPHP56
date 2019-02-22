@@ -651,6 +651,7 @@ class Zend_Validate_Hostname extends Zend_Validate_Abstract
         'sexy',
         'sg',
         'sh',
+        'shop',
         'shiksha',
         'shoes',
         'si',
